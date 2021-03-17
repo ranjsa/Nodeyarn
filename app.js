@@ -14,7 +14,6 @@ const exec_options = {
 };
 
 
-const spinner = ora('Loading unicorns').start();
 const spinner = ora(info("Install packages to allow apt to use a repository over HTTPS")).start();
 // Install packages to allow apt to use a repository over HTTPS
 //console.log();
