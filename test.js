@@ -74,3 +74,5 @@ const tasks = new Listr([
 tasks.run().catch(err => {
     console.error(err);
 });
+
+spinner.succeed(info("Top of the World"));
