@@ -25,6 +25,41 @@ spinner.start();
 	const {stdout} = await execa("echo y|sudo apt-get install apt-transport-https ca-certificates curl software-properties-common");
 	console.log(stdout);
     } catch (err) {
+
+    }
+})();
+
+(async () => {
+    try {
+	const {stdout} = await execa("sudo apt install curl");
+	console.log(stdout);
+    } catch (err) {
+        
+    }
+})();
+(async () => {
+    try {
+	const {stdout} = await execa("sudo curl -fsSL https://fnm.vercel.app/install | bash");
+	console.log(stdout);
+    } catch (err) {
+     
+    }
+})();
+
+(async () => {
+    try {
+	const {stdout} = await execa(". ~/.bashrc");
+	console.log(stdout);
+    } catch (err) {
+        
+    }
+})();
+
+(async () => {
+    try {
+	const {stdout} = await execa("fnm install 14.16.0");
+	console.log(stdout);
+    } catch (err) {
         
     }
 })();
