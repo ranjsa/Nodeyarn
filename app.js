@@ -21,8 +21,12 @@ spinner.start();
 // Install packages to allow apt to use a repository over HTTPS
 
 (async () => {
+    try {
 	const {stdout} = await execa("echo y|sudo apt-get install apt-transport-https ca-certificates curl software-properties-common");
 	console.log(stdout);
+    } catch (err) {
+        
+    }
 })();
 
 spinner.succeed(info("top of the world!!"));
