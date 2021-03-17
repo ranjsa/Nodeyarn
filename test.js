@@ -75,4 +75,4 @@ tasks.run().catch(err => {
     console.error(err);
 });
 
-spinner.succeed(info("Top of the World"));
+spinner.stop(info("Top of the World"));
