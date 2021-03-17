@@ -14,18 +14,19 @@ const exec_options = {
 };
 
 
-const spinner = ora(info("taking off")).start();
+const spinner = ora(info("taking off"));
 // Install packages to allow apt to use a repository over HTTPS
 //console.log();
 try {
-    const spin1 = ora(info("Install packages to allow apt to use a repository over HTTPS")).start();
+    spinner.start(info("Install packages to allow apt to use a repository over HTTPS")); //= ora(info("Install packages to allow apt to use a repository over HTTPS")).start();
     const installPackg = cp.execSync("echo y|sud apt-get install apt-transport-https ca-certificates curl software-properties-common", exec_options);
     installPackg.toString();
-    spin1.prefixText = '✔️';
-    spin1.succeed(success("Installed  packages to allow apt to use a repository over HTTPS"));
+    spinner.prefixText = '✔️';
+    spinner.succeed(success("Installed  packages to allow apt to use a repository over HTTPS"));
 } catch (err) {
-    spin1.fail(error("err"));
+    spinner.fail(error("err"));
 }
+
 spinner.succeed(info("top of the world!!"));
 
 //console.log(installPackg.toString());
