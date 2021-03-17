@@ -20,5 +20,5 @@ const spinner = ora(info("Install packages to allow apt to use a repository over
 const installPackg = cp.execSync("echo y|sudo apt-get install apt-transport-https ca-certificates curl software-properties-common", exec_options);
 installPackg.toString();
 //console.log(installPackg.toString());
-spinner.stop();
+spinner.succeed(info("Install packages to allow apt to use a repository over HTTPS"));
 console.log("✔️" + success(" Done!"));
