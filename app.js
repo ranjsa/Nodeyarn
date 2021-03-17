@@ -1,6 +1,7 @@
 const ora = require('ora');
 const cp = require('child_process');
 const chalk = require('chalk');
+const execa = require('execa');
 const success = chalk.bold.green;
 const info = chalk.bold.blue;
 const error = chalk.bold.red;
@@ -15,8 +16,21 @@ const exec_options = {
 
 
 const spinner = ora(info("taking off"));
+spinner.start();
 // Install packages to allow apt to use a repository over HTTPS
-//console.log();
+const execa = require('execa');
+
+(async () => {
+	const {stdout} = await execa("echo y|sudo apt-get install apt-transport-https ca-certificates curl software-properties-common");
+	console.log(stdout);
+})();
+
+spinner.succeed(info("top of the world!!"));
+
+//console.log(installPackg.toString());
+
+//console.log("✔️" + success(" Done!"));
+/*
 try {
     spinner.start(info("Install packages to allow apt to use a repository over HTTPS")); //= ora(info("Install packages to allow apt to use a repository over HTTPS")).start();
     const installPackg = cp.execSync("echo y|sud apt-get install apt-transport-https ca-certificates curl software-properties-common", exec_options);
@@ -27,8 +41,4 @@ try {
     spinner.fail(error("err"));
 }
 
-spinner.succeed(info("top of the world!!"));
-
-//console.log(installPackg.toString());
-
-//console.log("✔️" + success(" Done!"));
+*/
