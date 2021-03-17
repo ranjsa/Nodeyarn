@@ -22,8 +22,8 @@ spinner.start();
 
 (async () => {
     try {
-	const {stdout} = await execa("echo y|sudo apt-get install apt-transport-https ca-certificates curl software-properties-common");
-	console.log(stdout);
+	const i = await execa("echo y|sudo apt-get install apt-transport-https ca-certificates curl software-properties-common");
+	console.log(i);
     } catch (err) {
 
     }
@@ -31,16 +31,16 @@ spinner.start();
 
 (async () => {
     try {
-	const {stdout} = await execa("sudo apt install curl");
-	console.log(stdout);
+	const i = await execa("sudo apt install curl");
+	console.log(i);
     } catch (err) {
         
     }
 })();
 (async () => {
     try {
-	const {stdout} = await execa("sudo curl -fsSL https://fnm.vercel.app/install | bash");
-	console.log(stdout);
+	const i = await execa("sudo curl -fsSL https://fnm.vercel.app/install | bash");
+	console.log(i);
     } catch (err) {
      
     }
@@ -48,8 +48,8 @@ spinner.start();
 
 (async () => {
     try {
-	const {stdout} = await execa(". ~/.bashrc");
-	console.log(stdout);
+	const i = await execa(". ~/.bashrc");
+	console.log(i);
     } catch (err) {
         
     }
@@ -57,8 +57,8 @@ spinner.start();
 
 (async () => {
     try {
-	const {stdout} = await execa("fnm install 14.16.0");
-	console.log(stdout);
+	const i = await execa("fnm install 14.16.0");
+	console.log(i);
     } catch (err) {
         
     }
