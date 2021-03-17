@@ -1,0 +1,11 @@
+{
+  "name": "Nodeyarn",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/ranjsa/Nodeyarn.git",
+  "author": "Tushar <gauravtushar7@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ora": "^5.3.0"
+  }
+}
