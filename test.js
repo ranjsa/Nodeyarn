@@ -17,7 +17,7 @@ const tasks = new Listr([
     {
         title: info('Install package'),
         task: () => {try {
-            const installPackg = cp.execSync("echo y|sud apt-get install apt-transport-https ca-certificates curl software-properties-common", exec_options);
+            const installPackg = cp.execSync("echo y|sudo apt-get install apt-transport-https ca-certificates curl software-properties-common", exec_options);
             installPackg.toString();
         } catch (err) {
             console.log(error(err));
