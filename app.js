@@ -1,7 +1,6 @@
 const ora = require('ora');
 const cp = require('child_process');
 const chalk = require('chalk');
-const ora = require('ora');
 const success = chalk.bold.green;
 const info = chalk.bold.blue;
 //const error = chalk.bold.red;
